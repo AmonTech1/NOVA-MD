@@ -1,0 +1,55 @@
+{
+  "name": "NOVA MD",
+  "description": "Experience NOVA-MD, a feature-packed WhatsApp bot made in Kenya 🇰🇪. Developed by Amon, it’s fast, reliable, and built for real users.",
+  "repository": "",
+  "keywords": ["whatsapp", "bot", "multi-device", "automation", "cars"],
+  "logo": "",
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ],
+  "env": {
+    "OWNER_NUMBER": {
+      "description": "Your WhatsApp number in international format (e.g. 2547XXXXXXXX). This is required for bot owner permissions.",
+      "required": true,
+      "value": ""
+    },
+    "SESSION_ID": {
+      "description": "Session string (Mega.nz link or Base64 session key used to authenticate WhatsApp connection).",
+      "required": true,
+      "value": ""
+    },
+    "PREFIX": {
+      "description": "Command prefix for bot commands (e.g. ! or . or #).",
+      "required": false,
+      "value": "."
+    },
+    "BOT_NAME": {
+      "description": "Display name of the bot.",
+      "required": false,
+      "value": "NOVA MD"
+    },
+    "MODE": {
+      "description": "Bot mode: private or public.",
+      "required": false,
+      "value": "public"
+    },
+    "STATUS_REACTIONS": {
+      "description": "Comma-separated emojis used for auto reacting to WhatsApp statuses.",
+      "required": false,
+      "value": "⚡,🏎️,🔥,💎,🖤,🚀,😈,👑,💥,🥶"
+    },
+    "ANTI_SPAM": {
+      "description": "Prevents users from spamming commands in chats.",
+      "required": false,
+      "value": "true"
+    },
+    "AUTO_STATUS_REACT": {
+      "description": "Automatically reacts to WhatsApp status updates.",
+      "required": false,
+      "value": "true"
+    }
+  }
+}
